@@ -11,11 +11,6 @@ function App() {
   console.log("key", import.meta.env.VITE_API_KEY);
   const searchInput = useRef(null);
 
-  useEffect(() => {
-    const getImages = async () => {};
-    getImages();
-  }, []);
-
   const fetchImages = async () => {
     try {
       const result = await axios.get(
@@ -37,6 +32,7 @@ function App() {
   };
   const handleSelection = (selection) => {
     searchInput.current.value = selection;
+    fetchImages();
   };
   return (
     <div className="container">
