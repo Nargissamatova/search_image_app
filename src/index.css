@@ -15,11 +15,11 @@
     padding: 0;
 }
 
+/* the var() function is used to insert the value of a custom property (also known as a CSS variable) into a style property value. var() is allows you to define values once and reuse them throughout your stylesheet */
 body {
     color: var(--primary-color);
 }
 
-/* common css starts */
 
 .container {
     margin-left: auto;
